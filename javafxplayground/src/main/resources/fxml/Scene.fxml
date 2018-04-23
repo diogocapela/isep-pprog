@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="309.0" prefWidth="455.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="com.diogocapela.javafxplayground.FXMLController">
+    <children>
+      <BorderPane layoutX="20.0" layoutY="14.0" prefHeight="290.0" prefWidth="415.0">
+         <bottom>
+            <Label fx:id="coco" text="merda" BorderPane.alignment="CENTER" />
+         </bottom>
+      </BorderPane>
+        <Button fx:id="button" layoutX="126" layoutY="90" onAction="#handleButtonAction" text="Click Me!" />
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <CheckBox layoutX="91.0" layoutY="51.0" mnemonicParsing="false" text="CheckBox" />
+    </children>
+</AnchorPane>
