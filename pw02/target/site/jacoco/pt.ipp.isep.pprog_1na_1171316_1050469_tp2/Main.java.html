@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Main.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">pprog_1na_1171316_1050469_tp2</a> &gt; <a href="index.source.html" class="el_package">pt.ipp.isep.pprog_1na_1171316_1050469_tp2</a> &gt; <span class="el_source">Main.java</span></div><h1>Main.java</h1><pre class="source lang-java linenums">package pt.ipp.isep.pprog_1na_1171316_1050469_tp2;
+
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
+<span class="nc" id="L8">public class Main {</span>
+
+    public static void main(String[] args) {
+
+<span class="nc" id="L12">        List&lt;Loja&gt; lojas = new ArrayList&lt;Loja&gt;();</span>
+
+<span class="nc" id="L14">        lojas.add(new LojaAncoraPropria(&quot;ZARA&quot;, 100, 50));</span>
+<span class="nc" id="L15">        lojas.add(new LojaAncoraPropria(&quot;Worten&quot;, 200, 75));</span>
+<span class="nc" id="L16">        lojas.add(new LojaAncoraPropria(&quot;FNAC&quot;, 300, 120));</span>
+
+<span class="nc" id="L18">        lojas.add(new LojaAncoraExterna(&quot;Springfield&quot;, 1300, 200, 15, 120000));</span>
+<span class="nc" id="L19">        lojas.add(new LojaAncoraExterna(&quot;TH&amp;M&quot;, 2000, 240, 23, 111000));</span>
+
+<span class="nc" id="L21">        lojas.add(new LojaAncoraExterna(&quot;AH&amp;M&quot;, 2000, 240, 23, 111000));</span>
+
+<span class="nc" id="L23">        lojas.add(new LojaAncoraExterna(&quot;BH&amp;M&quot;, 2000, 240, 23, 111000));</span>
+
+<span class="nc" id="L25">        lojas.add(new LojaAncoraExterna(&quot;JH&amp;M&quot;, 2000, 240, 23, 111000));</span>
+
+<span class="nc" id="L27">        lojas.add(new LojaAncoraExterna(&quot;HH&amp;M&quot;, 2000, 240, 23, 111000));</span>
+
+<span class="nc" id="L29">        lojas.add(new LojaAncoraExterna(&quot;AAAH&amp;M&quot;, 2000, 240, 23, 111000));</span>
+
+<span class="nc" id="L31">        lojas.add(new LojaAncoraExterna(&quot;ITTH&amp;M&quot;, 2000, 240, 23, 111000));</span>
+
+
+
+
+<span class="nc" id="L36">        lojas.add(new LojaComumRestauracao(&quot;Pizza Hut&quot;, 1400, 5, 80, 40));</span>
+<span class="nc" id="L37">        lojas.add(new LojaComumRestauracao(&quot;McDonald's&quot;, 2000, 8, 90, 20));</span>
+<span class="nc" id="L38">        lojas.add(new LojaComumRestauracao(&quot;Burger King&quot;, 900, 12, 240, 15));</span>
+<span class="nc" id="L39">        lojas.add(new LojaComumRestauracao(&quot;Vegan Food&quot;, 1590, 25, 180, 34));</span>
+
+<span class="nc" id="L41">        lojas.add(new LojaComumQuiosque(&quot;Tabacaria do Manuel&quot;, 50, 3));</span>
+<span class="nc" id="L42">        lojas.add(new LojaComumQuiosque(&quot;Cromos Panini&quot;, 110, 1));</span>
+<span class="nc" id="L43">        lojas.add(new LojaComumQuiosque(&quot;A Revista&quot;, 75, 5));</span>
+
+<span class="nc" id="L45">        CentroComercial centroComercial = new CentroComercial(&quot;Norte Shopping&quot;, lojas);</span>
+
+<span class="nc" id="L47">        System.out.println(&quot;\n\nNome do centro comercial:&quot;);</span>
+
+<span class="nc" id="L49">        System.out.println(centroComercial.getNome());</span>
+
+<span class="nc" id="L51">        System.out.println(&quot;\n\nQuantidade de lojas do centro comercial:&quot;);</span>
+
+<span class="nc" id="L53">        System.out.println(centroComercial.getLojas().size());</span>
+
+<span class="nc" id="L55">        double totalRendas = 0;</span>
+<span class="nc" id="L56">        double totalSeguranca = 0;</span>
+<span class="nc" id="L57">        double rendasLojasComum = 0;</span>
+<span class="nc" id="L58">        double rendasLojasAncora = 0;</span>
+
+<span class="nc bnc" id="L60" title="All 2 branches missed.">        for (Loja loja : centroComercial.getLojas()) {</span>
+<span class="nc" id="L61">            double renda = loja.calcularRenda();</span>
+<span class="nc" id="L62">            totalRendas = totalRendas + renda;</span>
+<span class="nc bnc" id="L63" title="All 2 branches missed.">            if (loja instanceof LojaComum) {</span>
+<span class="nc" id="L64">                rendasLojasComum = rendasLojasComum + renda;</span>
+<span class="nc bnc" id="L65" title="All 2 branches missed.">            } else if (loja instanceof LojaAncora) {</span>
+<span class="nc" id="L66">                rendasLojasAncora = rendasLojasAncora + renda;</span>
+<span class="nc" id="L67">                totalSeguranca = totalSeguranca + ((LojaAncora) loja).calcularCustoSeguranca();</span>
+            }
+<span class="nc" id="L69">        }</span>
+
+<span class="nc" id="L71">        System.out.println(&quot;\n\nTotal de receitas (rendas + segurança) do centro comercial:&quot;);</span>
+
+<span class="nc" id="L73">        System.out.println(String.format(&quot;%.2f€ (%.2f€ + %.2f€)&quot;, totalRendas + totalSeguranca, totalRendas, totalSeguranca));</span>
+
+<span class="nc" id="L75">        System.out.println(&quot;\n\nValor das rendas a pagar pela totalidade das lojas (e percentagem relativa ao total de receitas):&quot;);</span>
+
+<span class="nc" id="L77">        System.out.println(String.format(&quot;Lojas Comuns: %.2f€ (%.2f%%)&quot;, rendasLojasComum, (rendasLojasComum/totalRendas)*100));</span>
+
+<span class="nc" id="L79">        System.out.println(String.format(&quot;Lojas Âncora: %.2f€ (%.2f%%)&quot;, rendasLojasAncora, (rendasLojasAncora/totalRendas)*100));</span>
+
+<span class="nc" id="L81">        System.out.println(&quot;\n\nCusto de segurança a pagar pela totalidade das lojas âncora (e percentagem relativa ao total de receitas):&quot;);</span>
+
+<span class="nc" id="L83">        System.out.println(String.format(&quot;%.2f€ (%.2f%%)&quot;, totalSeguranca, (totalSeguranca/rendasLojasAncora)*100));</span>
+
+
+<span class="nc" id="L86">        System.out.println(&quot;\n\nListagem das lojas por ordem crescente de renda:&quot;);</span>
+
+<span class="nc" id="L88">        Collections.sort(centroComercial.getLojas(), new CompareLojaByRenda());</span>
+
+<span class="nc bnc" id="L90" title="All 2 branches missed.">        for (Loja loja : centroComercial.getLojas()) {</span>
+<span class="nc" id="L91">            System.out.println(String.format(&quot;%s - %.2f€&quot;, loja.getNome(), loja.calcularRenda()));</span>
+<span class="nc" id="L92">        }</span>
+
+<span class="nc" id="L94">        System.out.println(&quot;\n\nListagem das lojas por ordem decrescente de renda:&quot;);</span>
+
+<span class="nc" id="L96">        Collections.sort(centroComercial.getLojas(), Collections.reverseOrder(new CompareLojaByRenda()));</span>
+
+<span class="nc bnc" id="L98" title="All 2 branches missed.">        for (Loja loja : centroComercial.getLojas()) {</span>
+<span class="nc" id="L99">            System.out.println(String.format(&quot;%s - %.2f€&quot;, loja.getNome(), loja.calcularRenda()));</span>
+<span class="nc" id="L100">        }</span>
+
+<span class="nc" id="L102">        System.out.println(&quot;\n\nListagem das lojas por ordem alfabética de tipos, e dentro destes por ordem alfabética de nomes:&quot;);</span>
+
+<span class="nc" id="L104">        Collections.sort(centroComercial.getLojas(), new CompareLojaByTypeThenAlphabet());</span>
+
+<span class="nc bnc" id="L106" title="All 2 branches missed.">        for (Loja loja : centroComercial.getLojas()) {</span>
+<span class="nc" id="L107">            System.out.println(String.format(&quot;%s - %s - %.2f€&quot;, loja.getClass().toString().substring(loja.getClass().toString().lastIndexOf(&quot;.&quot;) + 1), loja.getNome(), loja.calcularRenda()));</span>
+<span class="nc" id="L108">        }</span>
+
+<span class="nc" id="L110">    }</span>
+
+}
+
+<span class="nc" id="L114">class CompareLojaByRenda implements Comparator&lt;Loja&gt; {</span>
+    @Override
+    public int compare(Loja o1, Loja o2) {
+<span class="nc bnc" id="L117" title="All 2 branches missed.">        if (o1.calcularRenda() &gt; o2.calcularRenda())</span>
+<span class="nc" id="L118">            return 1;</span>
+<span class="nc bnc" id="L119" title="All 2 branches missed.">        if (o1.calcularRenda() &lt; o2.calcularRenda())</span>
+<span class="nc" id="L120">            return -1;</span>
+<span class="nc" id="L121">        return 0;</span>
+    }
+}
+
+<span class="nc" id="L125">class CompareLojaByTypeThenAlphabet implements Comparator&lt;Loja&gt; {</span>
+    @Override
+    public int compare(Loja o1, Loja o2) {
+<span class="nc bnc" id="L128" title="All 2 branches missed.">        if (o1.getClass() != o2.getClass()) {</span>
+<span class="nc" id="L129">            return o1.getClass().toString().compareTo(o2.getClass().toString());</span>
+        }
+<span class="nc" id="L131">        return o1.getNome().compareTo(o2.getNome());</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.1.201803210924</span></div></body></html>

@@ -1,0 +1,12 @@
+.button {
+    -fx-font-weight: bold;
+}
+
+
+#coco {
+    -fx-font-size: 40px;
+    -fx-font-family: Baghdad;
+    -fx-border-width: 2px;
+    -fx-border-color: red;
+    -fx-border-radius: 10px;
+}

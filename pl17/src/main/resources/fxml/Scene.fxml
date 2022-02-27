@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.diogocapela.pl17.FXMLController">
+   <top>
+      <BorderPane BorderPane.alignment="CENTER">
+         <left>
+            <HBox BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Quantidade de Letras [3-7]:">
+                     <HBox.margin>
+                        <Insets right="5.0" top="5.0" />
+                     </HBox.margin></Label>
+                  <TextField fx:id="input_qnt_letras" maxWidth="50.0" minWidth="50.0" />
+               </children>
+            </HBox>
+         </left>
+         <right>
+            <Button mnemonicParsing="false" onAction="#handleConfirm" text="Confirmar" BorderPane.alignment="CENTER" />
+         </right>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </BorderPane>
+   </top>
+   <left>
+      <Button minHeight="50.0" minWidth="60.0" mnemonicParsing="false" onAction="#handlePrev" text="&lt;&lt;" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin></Button>
+   </left>
+   <right>
+      <Button minHeight="50.0" minWidth="60.0" mnemonicParsing="false" onAction="#handleNext" text="&gt;&gt;" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin></Button>
+   </right>
+   <center>
+      <HBox fx:id="main_container" alignment="CENTER" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

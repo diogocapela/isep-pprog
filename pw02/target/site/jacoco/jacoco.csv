@@ -1,0 +1,12 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+pprog_1na_1171316_1050469_tp2,pt.ipp.isep.pprog_1na_1171316_1050469_tp2,CompareLojaByRenda,21,0,4,0,6,0,4,0,2,0
+pprog_1na_1171316_1050469_tp2,pt.ipp.isep.pprog_1na_1171316_1050469_tp2,CentroComercial,155,0,18,0,32,0,17,0,8,0
+pprog_1na_1171316_1050469_tp2,pt.ipp.isep.pprog_1na_1171316_1050469_tp2,LojaComumQuiosque,17,0,0,0,5,0,3,0,3,0
+pprog_1na_1171316_1050469_tp2,pt.ipp.isep.pprog_1na_1171316_1050469_tp2,LojaAncoraExterna,78,0,0,0,14,0,8,0,8,0
+pprog_1na_1171316_1050469_tp2,pt.ipp.isep.pprog_1na_1171316_1050469_tp2,LojaComum,43,0,0,0,9,0,5,0,5,0
+pprog_1na_1171316_1050469_tp2,pt.ipp.isep.pprog_1na_1171316_1050469_tp2,Loja,84,0,4,0,30,0,17,0,15,0
+pprog_1na_1171316_1050469_tp2,pt.ipp.isep.pprog_1na_1171316_1050469_tp2,LojaAncora,46,0,0,0,10,0,6,0,6,0
+pprog_1na_1171316_1050469_tp2,pt.ipp.isep.pprog_1na_1171316_1050469_tp2,CompareLojaByTypeThenAlphabet,22,0,2,0,4,0,3,0,2,0
+pprog_1na_1171316_1050469_tp2,pt.ipp.isep.pprog_1na_1171316_1050469_tp2,Main,484,0,12,0,61,0,8,0,2,0
+pprog_1na_1171316_1050469_tp2,pt.ipp.isep.pprog_1na_1171316_1050469_tp2,LojaComumRestauracao,73,0,0,0,14,0,8,0,8,0
+pprog_1na_1171316_1050469_tp2,pt.ipp.isep.pprog_1na_1171316_1050469_tp2,LojaAncoraPropria,24,0,0,0,5,0,3,0,3,0

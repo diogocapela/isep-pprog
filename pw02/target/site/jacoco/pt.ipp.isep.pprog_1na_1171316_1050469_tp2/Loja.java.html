@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Loja.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">pprog_1na_1171316_1050469_tp2</a> &gt; <a href="index.source.html" class="el_package">pt.ipp.isep.pprog_1na_1171316_1050469_tp2</a> &gt; <span class="el_source">Loja.java</span></div><h1>Loja.java</h1><pre class="source lang-java linenums">package pt.ipp.isep.pprog_1na_1171316_1050469_tp2;
+
+public abstract class Loja {
+    
+    private String nome;
+    private double area;
+<span class="nc" id="L7">    static private double rendaFixa = 500;</span>
+<span class="nc" id="L8">    static private double limitePequeno = 20;</span>
+<span class="nc" id="L9">    static private double limiteGrande = 100;</span>
+
+<span class="nc" id="L11">    public Loja(String nome, double area) {</span>
+<span class="nc" id="L12">        this.nome = nome;</span>
+<span class="nc" id="L13">        this.area = area;</span>
+<span class="nc" id="L14">    }</span>
+    
+    public Loja(Loja loja) {
+<span class="nc" id="L17">        this(loja.getNome(), loja.getArea());</span>
+<span class="nc" id="L18">    }</span>
+
+    public String getNome() {
+<span class="nc" id="L21">        return this.nome;</span>
+    }
+
+    public double getArea() {
+<span class="nc" id="L25">        return this.area;</span>
+    }
+
+    static public double getRendaFixa() {
+<span class="nc" id="L29">        return Loja.rendaFixa;</span>
+    }
+
+    static public double getLimitePequeno() {
+<span class="nc" id="L33">        return Loja.limitePequeno;</span>
+    }
+
+    static public double getLimiteGrande() {
+<span class="nc" id="L37">        return Loja.limiteGrande;</span>
+    }
+    
+    public void setNome(String nome) {
+<span class="nc" id="L41">        this.nome = nome;</span>
+<span class="nc" id="L42">    }</span>
+
+    public void setArea(double area) {
+<span class="nc" id="L45">        this.area = area;</span>
+<span class="nc" id="L46">    }</span>
+
+    static public void setRendaFixa(double rendaFixa) {
+<span class="nc" id="L49">        Loja.rendaFixa = rendaFixa;</span>
+<span class="nc" id="L50">    }</span>
+
+    static public void setLimitePequeno(double limitePequeno) {
+<span class="nc" id="L53">        Loja.limitePequeno = limitePequeno;</span>
+<span class="nc" id="L54">    }</span>
+
+    static public void setLimiteGrande(double limiteGrande) {
+<span class="nc" id="L57">        Loja.limiteGrande = limiteGrande;</span>
+<span class="nc" id="L58">    }</span>
+
+    @Override
+    public String toString() {
+<span class="nc" id="L62">        return String.format(&quot;Nome: %s%nÁrea: %.2f%n&quot;, this.nome, this.area);</span>
+    }
+
+    final public String classificarArea() {
+<span class="nc bnc" id="L66" title="All 2 branches missed.">        if(this.area &lt; Loja.limitePequeno)</span>
+<span class="nc" id="L67">            return &quot;Pequena&quot;;</span>
+<span class="nc bnc" id="L68" title="All 2 branches missed.">        else if(this.area &lt; Loja.limiteGrande)</span>
+<span class="nc" id="L69">            return &quot;Média&quot;;</span>
+<span class="nc" id="L70">        return &quot;Grande&quot;;</span>
+    }
+
+    abstract public double calcularRenda();
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.1.201803210924</span></div></body></html>

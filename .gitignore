@@ -1,3 +1,6 @@
+.DS_Store
+.idea
+
 # Compiled class file
 *.class
 
@@ -20,3 +23,24 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/pl02/target/
+/pl01/target/
+/pl03/target/
+/pl05/target/
+/pl05/nbproject/
+/pl06/target/
+/pl07/target/
+/pl09-comparator/nbproject/
+/pl09-comparator/target/
+/pw01/nbproject/
+/playgroundjavafx/target/
+/Utilitarios/target/
+/pl12/target/
+/pl13/target/
+/javafxplayground/target/
+/pl15/target/
+/playground/target/
+/pl14/target/
+/pl17/target/
+/exame01/nbproject/private/
+/exame02/nbproject/private/

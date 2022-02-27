@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.diogocapela.pl15.FXMLController">
+    <children>
+        <Button fx:id="button" layoutX="119.0" layoutY="120.0" onAction="#handleButtonAction" text="Clica aqui!" />
+      <Label layoutX="79.0" layoutY="53.0" text="Contador de Cliques:" />
+        <Label fx:id="label" layoutX="212.0" layoutY="53.0" minHeight="16" minWidth="30.0" prefHeight="17.0" prefWidth="30.0" text="0" />
+    </children>
+</AnchorPane>
